@@ -22,11 +22,11 @@ Add your API key:
 open_weather_map_api_key: YOUR_API_KEY
 
 
-3. **Set Up the Database
+3. **Set Up the Database**
 rails db:create
 rails db:migrate
 
-##Usage
+## Usage
 Run the Server
 rails server
 Access the Application
@@ -41,5 +41,4 @@ After logging in, enter a city name to get the current weather conditions.
 
 ## Testing
 Run tests with RSpec:
-
 bundle exec rspec
