@@ -1,97 +1,45 @@
-# README
+# Weather App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Weather App is a Ruby on Rails web application that provides current weather conditions for a given city using data from the OpenWeatherMap API.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+1. **Clone the Repository:**
+ 
+   ```bash
+   git clone https://github.com/AjayS21/weatherapp.git
+   cd weatherapp
 
-* System dependencies
+1. **Install Dependencies**
+   bundle install
 
-* Configuration
 
-* Database creation
+2. **API Configuration**
+. Sign up for an API key on OpenWeatherMap.
+. Edit your credentials:
+EDITOR="nano" bin/rails credentials:edit
+Add your API key:
+open_weather_map_api_key: YOUR_API_KEY
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-Weather App
-The Weather App is a simple web application built using Ruby on Rails that allows users to check the current weather conditions for a given city. It integrates with the OpenWeatherMap API to retrieve weather data.
-
-Installation
-Clone the Repository:
-
-bash
-Copy code
-git clone https://github.com/AjayS21/weatherapp.git
-Navigate to the Project Directory:
-
-bash
-Copy code
-cd weatherapp
-Install Dependencies:
-Make sure you have Ruby and Rails installed. Then, install the required gems using Bundler:
-
-bash
-Copy code
-bundle install
-Configure API Key:
-Create and configure your OpenWeatherMap API key. Follow the instructions in the "API Integration" section of this README.
-
-Set Up the Database:
-Run the following commands to create and migrate the database:
-
-bash
-Copy code
+3. **Set Up the Database
 rails db:create
 rails db:migrate
-API Integration
-Obtain OpenWeatherMap API Key:
-Sign up for an account on the OpenWeatherMap website and get an API key.
 
-Configure API Key:
-Open config/credentials.yml.enc to edit your credentials. Add your OpenWeatherMap API key as follows:
-
-yaml
-Copy code
-open_weather_map_api_key: YOUR_API_KEY
-Edit Credentials:
-To edit the credentials file, use the following command:
-
-bash
-Copy code
-EDITOR="nano" bin/rails credentials:edit
-Usage
-Run the Server:
-Start the Rails server:
-
-bash
-Copy code
+##Usage
+Run the Server
 rails server
-Access the Application:
-Open your web browser and navigate to http://localhost:3000.
+Access the Application
 
-Sign Up and Log In:
-Create a new account by signing up. You'll need to provide an email and password. Then, log in to access the weather information.
+Open your web browser and go to http://localhost:3000.
 
-Get Weather Information:
-After logging in, you can enter a city name to get the current weather conditions for that city.
+Sign Up and Log In
+Create an account by signing up with your email and password. Log in to access the weather information.
 
-Testing
-The application includes tests written using RSpec. To run the tests, use the following command:
+Get Weather Information
+After logging in, enter a city name to get the current weather conditions.
 
-bash
-Copy code
+## Testing
+Run tests with RSpec:
+
 bundle exec rspec
-Credits
-This Weather App was developed by [Your Name].
-
-License
-This project is licensed under the MIT License.
