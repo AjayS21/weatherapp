@@ -1,0 +1,21 @@
+<h1>Weather#show</h1>
+<p>Find me in app/views/weather/show.html.erb</p>
+
+<%= form_tag weather_path, method: :get do %>
+    <div>
+      <%= label_tag :city, "Enter City Name" %>
+      <%= text_field_tag :city %>
+    </div>
+    
+    <%= submit_tag "Get Weather" %>
+  <% end %>
+
+  <h1>Weather Information</h1>
+  <% if @weather_data %>
+    <p>City: <%= @weather_data['name'] %></p>
+    <p>Temperature: <%= @weather_data['main']['temp'] %> °C</p>
+    <!-- Display other weather data as needed -->
+  <% else %>
+    <p>No weather data available for the entered city.</p>
+  <% end %>
+  
